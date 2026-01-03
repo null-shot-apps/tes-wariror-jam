@@ -87,7 +87,7 @@ export default function ResolutionWarrior() {
   const [savedProgress, setSavedProgress] = useState(false);
   const keysPressed = useRef<Set<string>>(new Set());
   const particleIdCounter = useRef(0);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | undefined>(undefined);
 
   // Initialize enemy for current level
   const initializeEnemy = useCallback(() => {
